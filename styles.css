@@ -69,14 +69,26 @@ padding: 96px 0;
 nav {
     display: flex;
      align-items: center;
+     justify-content: space-between;
      padding: 40px 48px;
+}
+
+.nav__logo--wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__links--wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .nav__links {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-left: auto;
+    justify-content: flex-end;
     list-style-type: none;
 }
 
@@ -86,6 +98,8 @@ nav {
     margin: 0 32px 0 0;
     transition: all 300ms;
     text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
 }
 
 .nav__link::after {
@@ -131,6 +145,77 @@ nav {
     text-decoration: none;
     background-color: rgb(80, 17, 204);
 }
+
+/* Menu */
+
+.btn__menu {
+    background-color: transparent;
+    font-size: 40px;
+    text-align: center;
+    border: none;
+    color: #243e63;
+    display: none;
+    }
+
+    .menu__backdrop {
+        position: absolute;
+        top: 24px;
+        left: 16px;
+        right: 16px;
+        bottom: 410px;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border: 1px solid lightgray;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 300ms ease;
+    }
+
+    .menu__open .menu__backdrop {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .menu__link {
+        text-decoration: none;
+        color: #1a202c;
+        font-size: 18px;
+       font-weight: 700;
+        margin: 8px 0;
+        padding: 0 0 4px;
+        }
+
+        .menu__list {
+            list-style: none;
+            margin: 16px 0;
+        }
+
+        .btn__menu--close {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            padding: 8px;
+            color: black;
+        }
+
+        .menu__link--primary {
+            color: #f7fafc;
+            background: #6415ff;
+            margin: 8px;
+            padding: 12px 32px;
+            border-radius: 50px;
+        }
+
+        .menu__links {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
 /* Header */
 
 
@@ -988,7 +1073,7 @@ footer {
 
 .footer__column--link {
     display: inline-flex;
-    width: auto;
+    width: max-content;
     position: relative;
     text-decoration: none;
     color: #f7fafc;
@@ -1064,4 +1149,12 @@ footer {
     margin: 0 0 0 16px;
     padding: 8px;
     border-radius: 50%;
+}
+
+/* Media */
+
+@media (max-width: 1025px) {
+    .btn__menu {
+        display: block;
+    }
 }
