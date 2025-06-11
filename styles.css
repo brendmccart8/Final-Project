@@ -44,6 +44,8 @@ padding: 96px 0;
     color: rgb(36, 62, 99);
     line-height: 1.5;
     margin: 16px 0; 
+    width: 100%;
+    max-width: 100%;
 }
 
 .section__para {
@@ -52,6 +54,8 @@ padding: 96px 0;
     font-weight: 500;
     color: #7c8ba1;
     line-height: 1.625;
+    width: 100%;
+    max-width: 100%;
 }
 
 /* Navigation Bar */
@@ -150,7 +154,7 @@ nav {
 
 .btn__menu {
     background-color: transparent;
-    font-size: 40px;
+    font-size: 24px;
     text-align: center;
     border: none;
     color: #243e63;
@@ -247,15 +251,18 @@ nav {
     border-radius: 40px;
     position: relative;
     margin-bottom: 80px;
-    min-width: 438px;
+    width: 438px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+
 }
 
 .header__button { 
     position: absolute;
     height: 55px;
     width: 150px;
-    right: -430px;
-    top: -143px;
     border-radius: 40px;
     font-size: 16px;
     color: white;
@@ -264,6 +271,7 @@ nav {
     font-weight: 700;
     transition: all 300ms;
     cursor: pointer;
+    margin: 8px;
 }
 
 .header__button:hover {
@@ -804,6 +812,7 @@ color: #f7fafc;
   justify-content: center;
   align-items: center;
   padding: 32px 64px; 
+  border-radius: 0 0 10px 10px;
 }
 
 .plan__bottom1 {
@@ -1057,11 +1066,13 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer__column {
     display: flex;
     flex-direction: column;
+    width: max-content;
 }
 
 .footer__column--title {
@@ -1069,6 +1080,7 @@ footer {
    color: #f7fafc;
    font-size: 16px; 
    margin-bottom: 24px;
+   width: max-content;
 }
 
 .footer__column--link {
@@ -1157,4 +1169,416 @@ footer {
     .btn__menu {
         display: block;
     }
+
+.nav__link,
+.nav__link--primary {
+display: none;
+}
+
+.header__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header__div {
+    width: 70%;
+
+}
+
+.header__picture {
+    margin-top: 32px;
+}
+
+.header__email--input {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+.header__img--wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.header__title {
+    font-size: 30px;
+    padding: 0;
+}
+
+.header__para {
+    margin: 24px 0;
+}
+
+.header__h3 {
+    margin-top: 48px;
+}
+
+.service {
+    width: calc(100%/2);
+}
+
+.values__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.plans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+}
+
+@media (max-width: 768px) {
+   
+    .service {
+        width: calc(100%/1);
+        display: flex;
+        justify-content: center;
+    }
+
+    .quality__content {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+.quality__img--wrapper {
+    width: 100%;
+}
+
+.quality__description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 64px 0 0 0;
+    width: 60%;
+    max-width: 60%;
+}
+
+.section__title {
+    font-size: 36px;
+}
+
+.section__para {
+    font-size: 14px;
+}
+
+.steps__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+text-align: center;
+}
+
+.steps__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 60%;
+    padding: 0px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.step__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.steps__img--wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+
+.values__content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;  
+}
+
+.values__description {
+    padding: 64px 0 0;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.value__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.values__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.value__para--wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.value__para {
+    text-align: center;
+    width: 100%;
+    margin: 16px auto 0;
+    }
+
+.plans {
+    flex-direction: column;
+    align-items: center;
+}
+
+.plan {
+    width: 55%;
+}
+
+.plan__title {
+    font-size: 48px;
+}
+
+.plan {
+    margin-right: 0;
+}
+
+.testimonial__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.testimonial__description {
+    margin-top: 48px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial__img {
+    width: 100%;
+}
+
+.testimonial__img--wrapper {
+    width: 65%;
+}
+
+.start__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.start__title--wrapper {
+    width: 100%;
+    padding: 96px 32px 0 32px;
+}
+
+.start__buttons {
+    width: 100%;
+    padding: 32px 32px 96px 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__columns {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer__column {
+    width: calc(100%/3);
+    margin-top: 40px;
+}
+
+.footer__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__copyright {
+    margin: 32px 0 0;
+}
+
+.footer__social--links {
+    margin: 32px 0 0;
+}
+
+}
+
+@media (max-width: 640px) {
+    
+
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.header__div {
+    width: 100%;
+}
+
+.header__h3 {
+    margin-top: 120px;
+    font-size: 14px;
+}
+
+.header__email--input {
+    width: 90%;
+}
+
+.header__email {
+    width: 90%;
+}
+
+.header__button {
+    left: -10px;
+    bottom: -90px;
+    width: 100%;
+    height: 70px;
+}
+
+.header__picture {
+    width: 100%;
+}
+
+.features__wrapper {
+    padding: 0 32px;
+}
+
+.values__picture--wrapper {
+    width: 80%;
+}
+
+.start__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.start__button1 {
+    margin: 0;
+    padding: 12px 24px;
+}
+
+.start__button2 {
+    margin: 24px 0 0;
+    padding: 12px 24px;
+}
+
+.footer__columns {
+    display: flex;
+    
+}
+
+.footer__column {
+    width: calc(100%/5);
+}
+
+footer {
+    padding-top: 48px;
+}
+}
+
+@media (max-width: 610px) {
+    .footer__column {
+        width: calc(100%/4);
+    }
+
+    .footer__columns {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 464px) {
+    .footer__column {
+        width: calc(100%/3);
+    }
+}
+
+@media (max-width: 352px) {
+    .footer__column {
+        width: calc(100%/2);
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer__columns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+.testimonial__profile--wrapper {
+    display: flex;
+    flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.testimonial__name--wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial__name {
+    margin: 0;
+}
+
+.testimonial__role {
+    margin: 0;
+}
+
+.testimonial__buttons {
+    margin: 32px 0 0;
+}
+
 }
